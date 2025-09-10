@@ -106,8 +106,7 @@ python -m http.server 8080
 
 Aquí tienes el ZIP del proyecto:
 
-⬇️ Descargar proyecto (ZIP)
-
+[⬇️ Descargar proyecto (ZIP)](https://github.com/jesuscarreon2511/Amigo_Secreto/archive/refs/heads/main.zip)
 ---
 
 <h2 id="tecnologias">🧰 Tecnologías</h2>
