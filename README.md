@@ -89,10 +89,12 @@
 
 ---
 
-<h2 id="instalacion">🛠️ Instalación local</h2>
+<h2 id="instalacion">🛠️ Instalación local y visualizacion</h2>
 
 **Opción rápida**
 - Abre `index.html` directamente en el navegador.
+- Ó haz clik en esta direccion:
+- https://jesuscarreon2511.github.io/Amigo_Secreto/
 
 **Servidor local (opcional)**
 
