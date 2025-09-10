@@ -1,84 +1,98 @@
-# Amigo Secreto
-
+<!-- Encabezado bonito -->
+<h1 align="center">🎁 Amigo Secreto</h1>
 <p align="center">
-  <img src="assets/amigo-secreto.png" alt="Logo/portada del proyecto Amigo Secreto" width="260">
+  App web en <b>HTML/CSS/JS</b> para agregar participantes y <b>sortear</b> un amigo secreto al azar.
 </p>
 
 <p align="center">
-  <img alt="Estado" src="https://img.shields.io/badge/STATUS-EN%20DESARROLLO-green">
-  <img alt="Licencia" src="https://img.shields.io/badge/LICENCIA-Unlicense-blue">
-  <img alt="Lenguaje principal" src="https://img.shields.io/github/languages/top/jesuscarreon2511/Amigo-Secreto">
-  <img alt="Último commit" src="https://img.shields.io/github/last-commit/jesuscarreon2511/Amigo-Secreto">
+  <img src="assets/amigo-secreto.png" alt="Logo Amigo Secreto" width="220" />
 </p>
 
-## Índice
-- [Descripción](#descripción)
-- [Características](#características)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Uso](#uso)
-- [Instalación local](#instalación-local)
-- [Publicación en GitHub Pages](#publicación-en-github-pages)
-- [Descargas](#descargas-opcional)
-- [Tecnologías](#tecnologías)
-- [Accesibilidad](#accesibilidad)
-- [Posibles mejoras](#posibles-mejoras)
-- [Contribución](#contribución)
-- [Autor](#autor)
-- [Licencia](#licencia)
+<p align="center">
+  <a href="https://jesuscarreon2511.github.io/Amigo-Secreto/"><img alt="Demo" src="https://img.shields.io/badge/🚀_Ver_App-Online-5ce1e6?labelColor=111218"></a>
+  <img alt="Estado" src="https://img.shields.io/badge/STATUS-EN%20DESARROLLO-22c55e?labelColor=111218">
+  <img alt="Licencia" src="https://img.shields.io/badge/LICENCIA-Unlicense-64748b?labelColor=111218">
+  <img alt="Lenguaje" src="https://img.shields.io/github/languages/top/jesuscarreon2511/Amigo-Secreto?labelColor=111218">
+  <img alt="Último commit" src="https://img.shields.io/github/last-commit/jesuscarreon2511/Amigo-Secreto?labelColor=111218">
+</p>
 
 ---
 
-## Descripción
-**Amigo Secreto** es una app web simple (HTML/CSS/JS) para:
-- **Agregar** nombres de participantes a una lista (validando entrada vacía).
+## 🧭 Índice
+- [Descripción](#-descripción)
+- [Características](#-características)
+- [Estructura del proyecto](#-estructura-del-proyecto)
+- [Uso](#-uso)
+- [Instalación local](#-instalación-local)
+- [Descargas](#-descargas)
+- [Tecnologías](#-tecnologías)
+- [Accesibilidad](#-accesibilidad)
+- [Posibles mejoras](#-posibles-mejoras)
+- [Contribución](#-contribución)
+- [Autor](#-autor)
+- [Licencia](#-licencia)
+
+---
+
+## 📝 Descripción
+**Amigo Secreto** es una app web simple para:
+
+- **Agregar** nombres de participantes a una lista (con validación de entrada vacía).
 - **Listar** los nombres en pantalla.
-- **Sortear** un participante al azar y mostrarlo por alerta y en la UI.
+- **Sortear** un participante al azar y mostrarlo por alerta y en la interfaz.
 
-> Mensaje de validación cuando el input está vacío: **“Por favor, inserte un nombre.”**
+> Si el campo está vacío, se muestra: **“Por favor, inserte un nombre.”**
 
 ---
 
-## Características
-- `Array "amigos"` para almacenar participantes.
-- `agregarAmigo()`:
-  - Lee el valor del input con `getElementById`.
-  - Valida que no esté vacío → `alert("Por favor, inserte un nombre.")`.
-  - Agrega al array con `.push()` y limpia el input.
-  - Actualiza la lista en pantalla.
-- `actualizarLista()`:
+## ✨ Características
+- **Array `amigos`** para almacenar participantes.
+- **`agregarAmigo()`**:
+  - Lee el input con `document.getElementById`.
+  - Valida vacío → `alert("Por favor, inserte un nombre.")`.
+  - Inserta con `.push()`, limpia el input y refresca la lista.
+- **`actualizarLista()`**:
   - Limpia la `<ul>` con `innerHTML = ""`.
-  - Recorre el array y crea `<li>` por cada nombre.
-- `sortearAmigo()`:
+  - Recorre el array y crea un `<li>` por cada nombre.
+- **`sortearAmigo()`**:
   - Verifica que existan nombres.
-  - Elige índice aleatorio con `Math.floor(Math.random() * amigos.length)`.
-  - Muestra el resultado en `alert` y lo pinta en `#resultado`.
+  - Elige índice aleatorio: `Math.floor(Math.random() * amigos.length)`.
+  - Muestra el ganador en `alert` y en `#resultado`.
 
 ---
 
-## Estructura del proyecto
+## 🗂️ Estructura del proyecto
+
 .
-├── index.html # Página principal
-├── app.js # Lógica: agregar, listar, sortear
-├── style.css # Estilos
-└── assets/ # Imágenes/íconos
-├── amigo-secreto.png
-└── play_circle_outline.png
+├── index.html                # Página principal
+├── app.js                    # Lógica: agregar, listar, sortear
+├── style.css                 # Estilos
+└── assets/                   # Imágenes/íconos
+    ├── amigo-secreto.png
+    └── play_circle_outline.png
 
 
 ---
 
-## Uso
-1. Escribe un nombre en el campo de texto.
-2. Haz clic en **“Añadir”**.  
-   - Si está vacío, verás: **“Por favor, inserte un nombre.”**
-3. Repite para agregar más participantes.
-4. Haz clic en **“Sortear amigo”** para obtener un ganador al azar.
+🕹️ Uso
+
+Escribe un nombre en el campo de texto.
+
+Haz clic en “Añadir”.
+
+Si está vacío, verás: “Por favor, inserte un nombre.”
+
+Repite para agregar más participantes.
+
+Haz clic en “Sortear amigo” para obtener un ganador al azar.
 
 ---
 
-## Instalación local
-Opción rápida:
-- Abre `index.html` directamente en tu navegador.
+🛠️ Instalación local
+
+Opción rápida
+
+Abre index.html directamente en el navegador.
 
 Servidor local (opcional):
 
@@ -90,68 +104,80 @@ python -m http.server 8080
 
 Descargas
 Aqui tienes el zip del proyecto. Checalo: 
-<a href="https://github.com/jesuscarreon2511/Amigo-Secreto/archive/refs/heads/main.zip" class="btn">
-  ⬇️ Descargar proyecto completo (ZIP)
-</a>
----
 
-Tecnologías
-HTML5 — estructura.
 
-CSS3 — estilos responsivos.
-
-JavaScript (ES6+) — arrays, DOM, validación, sorteo.
-
-Shields.io — insignias del README.
-
-GitHub Pages — hosting estático.
+[⬇️ Descargar proyecto (ZIP)](https://github.com/jesuscarreon2511/Amigo_Secreto/archive/refs/heads/main.zip)
 
 ---
 
-Accesibilidad
-Atributos aria-live en la lista de resultados.
+🧰 Tecnologías
+
+HTML5 — estructura
+
+CSS3 — estilos responsivos
+
+JavaScript (ES6+) — arrays, DOM, validación, sorteo
+
+Shields.io — insignias del README
+
+GitHub Pages — hosting estático
+
+---
+
+♿ Accesibilidad
+
+Atributos aria-live en resultados.
 
 Botones con aria-label.
 
-Mensajes claros en validaciones.
+Mensajes de validación claros.
 
 ---
 
-Posibles mejoras
-Persistencia con LocalStorage (mantener lista tras recargar).
+🗺️ Posibles mejoras
 
-Evitar nombres duplicados.
+ Persistencia con LocalStorage (mantener lista tras recargar).
 
-Botón para limpiar lista completa.
+ Evitar nombres duplicados.
 
-Modal/Toast en lugar de alert() para mejor UX.
+ Botón para limpiar la lista completa.
 
-Tests básicos de funciones (agregarAmigo, sortearAmigo).
+ Reemplazar alert() por modal/toast.
+
+ Tests básicos (agregarAmigo, sortearAmigo).
 
 ---
 
-Contribución
+🤝 Contribución
+
 ¿Quieres proponer cambios?
 
-Haz fork del repo.
+Haz fork del repositorio.
 
-Crea una rama: git checkout -b feature/mi-mejora
+Crea una rama:
 
-Commit: git commit -m "feat: agrega X"
+git checkout -b feature/mi-mejora
 
-Push: git push origin feature/mi-mejora
+Realiza tu commit:
+
+git commit -m "feat: agrega X"
+
+Sube tu rama:
+
+git push origin feature/mi-mejora
 
 Abre un Pull Request.
 
 ---
 
-Autor
+👤 Autor
+
 jesuscarreon2511
 GitHub: https://github.com/jesuscarreon2511
 
 ---
 
-Licencia
-## Licencia
-Este proyecto está dedicado al **dominio público** bajo **The Unlicense**.  
+📄 Licencia
+
+Este proyecto está dedicado al dominio público bajo The Unlicense.
 Puedes copiar, modificar, publicar, usar, compilar, vender o distribuir este software, con o sin cambios, para cualquier propósito.
