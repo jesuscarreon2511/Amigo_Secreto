@@ -61,15 +61,19 @@
 
 ---
 
-## 🗂️ Estructura del proyecto
+<h3>📁 Estructura del proyecto</h3>
 
-.
-├── index.html                # Página principal
-├── app.js                    # Lógica: agregar, listar, sortear
-├── style.css                 # Estilos
-└── assets/                   # Imágenes/íconos
-    ├── amigo-secreto.png
-    └── play_circle_outline.png
+<ul>
+  <li><code>index.html</code> — Página principal</li>
+  <li><code>app.js</code> — Lógica: agregar, listar, sortear</li>
+  <li><code>style.css</code> — Estilos</li>
+  <li><code>assets/</code> — Imágenes / íconos
+    <ul>
+      <li><code>amigo-secreto.png</code></li>
+      <li><code>play_circle_outline.png</code></li>
+    </ul>
+  </li>
+</ul>
 
 
 ---
